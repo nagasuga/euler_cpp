@@ -3,3 +3,6 @@ run:
 
 copy:
 	cp -r _template ${NUM}
+
+test:
+	clang++ -isystem ${GTEST_DIR}/include -pthread ${NUM}/test.cpp ${GTEST_DIR}/libgtest.a -o ./test.out && ./test.out
